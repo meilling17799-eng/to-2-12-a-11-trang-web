@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #8B0000; 
+    color: #333;
+    overflow-x: hidden;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #600;
+}
+
+.header-bg {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.header-content {
+    background: #fff;
+    margin-top: -5px;
+    padding: 10px;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #b30000;
+    font-size: 2.5rem;
+    margin: 5px 0;
+}
+
+.nav-menu button {
+    background: #8B0000;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin: 2px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* --- CONTAINER CHÍNH --- */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* --- TEXT SECTIONS --- */
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.content-box {
+    background-color: #ffe6e6; /* Màu hồng nhạt */
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.content-box h3 {
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: serif;
+    font-style: italic;
+}
+
+.content-box p {
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.mt-20 { margin-top: 20px; }
+
+/* --- GALLERY --- */
+.gallery-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+/* --- MEDIA (VIDEO & AUDIO) --- */
+.media-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.video-part, .audio-part {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Video */
+.pink-video-box {
+    background-color: #ffe6e6;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Audio Record */
+.record-container {
+    background-color: #ffe6e6;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.record-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#vinyl-record {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    object-fit: cover;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    /* Animation sẽ được kích hoạt bởi JS */
+}
+
+.play-hint {
+    font-size: 0.8rem;
+    color: #8B0000;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- DECORATION AREA (CÔ GIÁO & THƠ) --- */
+.decoration-area {
+    position: relative;
+    margin-top: 30px;
+    height: 400px; /* Tạo không gian cho các hình sắp xếp */
+}
+
+.teacher-img {
+    width: 370px;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    z-index: 2;
+}
+
+.poem-box {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    background: rgba(255, 230, 230, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.poem-box h4 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.lotus-decor {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    width: 150px;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+/* --- GIFT SECTION --- */
+.gift-section {
+    position: relative;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.gift-wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+.gift-img {
+    width: 180px; /* Điều chỉnh kích thước hình quà + cô bé */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gift-img:hover {
+    transform: scale(1.1);
+}
+
+.gift-text {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #555;
+    color: white;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info input {
+    display: block;
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    border: none;
+    border-radius: 3px;
+}
+
+.submit-btn {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+}
+
+.social-icons span {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+}

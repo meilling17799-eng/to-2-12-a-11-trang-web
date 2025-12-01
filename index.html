@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường 12A11 - Chào Mừng 20/11</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <img src="Hoa phuong.png" alt="Hoa phượng" class="header-bg">
+        <div class="header-content">
+            <div class="logo">Trường THPT Lê Trọng Tấn</div>
+            <h1>Chào mừng 20/11</h1>
+            <nav class="nav-menu">
+                <button>Giới thiệu</button>
+                <button>Lời tri ân</button>
+                <button>Hình ảnh</button>
+                <button>Video</button>
+                <button>Âm nhạc</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <section class="section text-section">
+            <h2 class="section-title">1. Giới thiệu:</h2>
+            <div class="content-box">
+                <h3>Lê Trọng Tấn và ngày 20/11</h3>
+                <p>Giữa những tà áo trắng còn vương nắng sớm, chúng em đứng lại nơi mái trường thân thương, ghi vào khung hình một khoảnh khắc đẹp – nơi sự biết ơn kịp nở thành "đóa hoa" gửi đến thầy cô.</p>
+            </div>
+
+            <div class="content-box mt-20">
+                <h3>Lời tri ân</h3>
+                <p>Trong tiếng cười rộn ràng và ánh mắt trong veo, hy vọng rằng những giây phút hôm ấy sẽ thay chúng em nói lời cảm tạ thật chân thành. Vì những bước đi hôm nay của chúng em đều được dẫn dắt bằng trái tim của những người gieo chữ vĩ đại...</p>
+            </div>
+        </section>
+
+        <section class="section gallery-section">
+            <h2 class="section-title">2. Hình ảnh:</h2>
+            <div class="gallery-container">
+                <img src="Ảnh tập thể.png" alt="Hoạt động lớp 12A11" class="gallery-img">
+            </div>
+        </section>
+
+        <div class="media-row">
+            
+            <section class="section video-part">
+                <h2 class="section-title">3. Video:</h2>
+                <div class="pink-video-box">
+                    <video controls width="100%" height="100%">
+                        <source src="Hú.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                </div>
+            </section>
+
+            <section class="section audio-part">
+                <h2 class="section-title">4. Âm thanh:</h2>
+                <div class="record-container" onclick="toggleAudio()">
+                    <div class="record-wrapper">
+                        <img id="vinyl-record" src="Dianhac.png" alt="Đĩa nhạc Bụi Phấn">
+                        <div class="play-hint">Chạm để phát nhạc ♪</div>
+                    </div>
+                    
+                    <audio id="bg-music" loop>
+                        <source src="Bui-Phan-Luong-Bich-Huu.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </section>
+        </div>
+
+        <div class="decoration-area">
+            <img src="cogiao .png" class="teacher-img" alt="Cô giáo và học sinh">
+            
+            <div class="poem-box">
+                <h4>Thơ ca:</h4>
+                <p>Thầy cô là ngọn đèn sáng<br>
+                Soi đường con bước tới trường<br>
+                Con xin khắc ghi ân nặng<br>
+                Tình thầy cô mãi trong lòng</p>
+            </div>
+
+            <img src="HOA.png" class="lotus-decor" alt="Hoa sen">
+        </div>
+
+        <div class="gift-section">
+            <div class="gift-wrapper">
+                <a href="trang_web_khac.html" target="_blank">
+                    <img src="quà.png" alt="Hộp quà bí mật" class="gift-img">
+                </a>
+                <p class="gift-text">Chạm vào<br>hộp quà nè!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Liên hệ qua Email:</p>
+                <input type="email" placeholder="Nhập email...">
+                <p>Góp ý:</p>
+                <input type="text" placeholder="Lời nhắn...">
+            </div>
+            
+            <div class="footer-action">
+                <p>&copy; Bản quyền thuộc về tổ 2_12A11</p>
+                <button class="submit-btn" onclick="window.location.href='trang_cam_on.html'">Gửi biểu mẫu</button>
+                <div class="social-icons">
+                    <span>📞</span> <span>f</span> <span>📷</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var audio = document.getElementById("bg-music");
+        var record = document.getElementById("vinyl-record");
+        var isPlaying = false;
+
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                record.style.animationPlayState = 'paused';
+                isPlaying = false;
+            } else {
+                audio.play();
+                record.style.animation = 'spin 4s linear infinite';
+                record.style.animationPlayState = 'running';
+                isPlaying = true;
+            }
+        }
+    </script>
+</body>
+</html>
